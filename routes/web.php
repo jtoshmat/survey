@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('tests','TestsController@tests');
 
+Route::get('products','TestsController@products');
+Route::get('question/{id}','TestsController@question');
+
