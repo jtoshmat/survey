@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-@foreach($questions as $question)
-{{$question->question_text}}<hr>
+@foreach($products as $product)
+
+    <a href="question/{{$product->id}}">{{$product->product_type}}</a> <hr>
 @endforeach
 
 
