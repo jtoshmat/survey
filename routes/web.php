@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\TestsController;
+
 Route::get('/', function () {
     return view('welcome');
 
@@ -23,5 +25,5 @@ Route::get('tests','TestsController@tests');
 Route::get('products','TestsController@products');
 Route::get('question/{id}','TestsController@question');
 Route::get('users','UsersController@users');
-
+Route::get('company','TestsController@option');
 
