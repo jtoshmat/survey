@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-@foreach($questions as $question)
-{{$question->question_text}}<hr>
+
+@foreach($tests as $test)
+{{$test->question_text}}<hr>
 @endforeach
 
 
