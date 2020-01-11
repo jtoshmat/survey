@@ -24,4 +24,6 @@ Route::get('products','TestsController@products');
 Route::get('question/{id}','TestsController@question');
 Route::get('users','UsersController@users');
 
+Route::get('rows','SuperController@rows');
+
 
