@@ -28,4 +28,6 @@ Route::get('users','UsersController@users');
 
 
 Route::get('rows','SuperController@rows');
-Route::get('company','TestsController@option');Route::post('company','TestsController@next');
+Route::get('company','TestsController@option');
+Route::post('company','TestsController@next');
+Route::get('categories', 'CategoriesController@catalog');
