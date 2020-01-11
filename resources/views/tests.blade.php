@@ -9,6 +9,20 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
+
+@foreach($tests as $test)
+{{$test->question_text}}<hr>
+@endforeach
+=======
+>>>>>>> 716b77b923928aa391652f85fe9306da64c76a7b
+
+
+@foreach($questions as $question)
+    {{$question->question_text}}<hr>
+@endforeach
+
+
 
 <!--
 Basic skeleton - div, container,
@@ -50,7 +64,6 @@ button (redirects to survey)
 
 </div>
 </div>
-
 
 
 </body>

@@ -39,4 +39,11 @@ class TestsController extends Controller
 
 
     }
+
+    public function getstarted ()
+    {
+
+        return view('getstarted');
+    }
 }
+
