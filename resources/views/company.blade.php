@@ -162,12 +162,13 @@
 </style>
 
 <script>
-var id = 1;
+var id = 2;
 $(function () {
   $(".btn").click(function(){
     callHttp("api/company", {id: id});
-    $(".mywrapper").hide();
+$("#mywrapper"+id-1).hide();
     $("#mywrapper"+id).show();
+
     id =id+1;
 
 
