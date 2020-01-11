@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Product;
 use App\Question;
 use Illuminate\Http\Request;
@@ -19,7 +20,20 @@ class TestsController extends Controller
     }
     public function question($id)
     {
-        $questions = Question::where('product_id', $id)->paginate(1);
-        return view('tests', compact('questions'));
+        $tests = Question::where('product_id', $id)->paginate(1);
+        return view('tests', compact('tests'));
+    }
+
+    public function option()
+    {
+        $options = Question::all()->take(1);
+        return view('company',compact('options'));
+    }
+
+    public function getstarted ()
+    {
+
+        return view('getstarted');
     }
 }
+
