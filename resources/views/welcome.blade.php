@@ -87,7 +87,7 @@
 
                 <div class="links">
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                    <a href="http://survey.uz/company">Start your Survey</a>
+                    <a href="http://survey.uz/company">Start sdkljfhyour Survey</a>
                     <input type="search" q="googlesearch">
                 </div>
             </div>
