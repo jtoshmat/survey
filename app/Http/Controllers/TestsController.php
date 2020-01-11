@@ -29,4 +29,11 @@ class TestsController extends Controller
         $options = Question::all()->take(1);
         return view('company',compact('options'));
     }
+
+    public function getstarted ()
+    {
+
+        return view('getstarted');
+    }
 }
+

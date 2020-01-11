@@ -25,5 +25,14 @@ Route::get('tests','TestsController@tests');
 Route::get('products','TestsController@products');
 Route::get('question/{id}','TestsController@question');
 Route::get('users','UsersController@users');
+
+
+Route::get('rows','SuperController@rows');
+
+
 Route::get('company','TestsController@option');
 Route::get('categories', 'CategoriesController@catalog');
+
+
+Route::get('getstarted','TestsController@getstarted');
+

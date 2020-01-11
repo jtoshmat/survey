@@ -17,6 +17,13 @@
 =======
 >>>>>>> 716b77b923928aa391652f85fe9306da64c76a7b
 
+
+@foreach($questions as $question)
+    {{$question->question_text}}<hr>
+@endforeach
+
+
+
 <!--
 Basic skeleton - div, container,
 button (redirects to survey)
@@ -57,7 +64,6 @@ button (redirects to survey)
 
 </div>
 </div>
-
 
 
 </body>
