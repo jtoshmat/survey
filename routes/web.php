@@ -28,3 +28,7 @@ Route::get('question/{id}','TestsController@question');
 Route::get('users','UsersController@users');
 Route::get('company','TestsController@option');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
