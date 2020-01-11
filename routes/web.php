@@ -31,3 +31,4 @@ Route::get('rows','SuperController@rows');
 Route::get('company','TestsController@option');
 Route::post('company','TestsController@next');
 Route::get('categories', 'CategoriesController@catalog');
+Route::get('getstarted', 'TestsController@getstarted');
