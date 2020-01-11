@@ -26,9 +26,13 @@ Route::get('tests','TestsController@tests');
 Route::get('products','TestsController@products');
 Route::get('question/{id}','TestsController@question');
 Route::get('users','UsersController@users');
-Route::get('company','TestsController@option');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('rows','SuperController@rows');
+Route::get('company','TestsController@option');
+Route::post('company','TestsController@next');
+Route::get('categories', 'CategoriesController@catalog');
+Route::get('getstarted', 'TestsController@getstarted');

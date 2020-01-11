@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
 
 <div class="container-fluid">
     @foreach($options as $option)
-    <div id="mywrapper">
+    <div class="mywrapper" id="mywrapper{{$option->id}}">
         <div class="title">
-            <h2>{{$option->question_text}}</h2>
+            <h2 class="h2" >{{$option->id}}:{{$option->question_text}}</h2>
         </div>
 
         <div class="answers">
@@ -86,12 +87,13 @@
                </table>
 
                 <div class="prev_button">
-                    <button class="btn btn-primary">Previous</button>
+                    <button class="btn btn-primary" value="1" name="previous">Previous</button>
                 </div>
 
                 <div class="next_button">
-                    <button class="btn btn-primary">Next</button>
-                </div>
+                    <button class="btn btn-primary" value="1" name="next">Next</button>
+                </div><br>
+
             @endforeach
             <div class="clearfix"></div>
         </div>
@@ -150,8 +152,39 @@
         background-color: #1f6994;
         color:white;
     }
+    .mywrapper{
+      display:none;
+    }
+    #mywrapper1{
+      display: block;
+    }
 
 </style>
+
+<script>
+var id = 2;
+$(function () {
+  $(".btn").click(function(){
+    callHttp("api/company", {id: id});
+$("#mywrapper"+id-1).hide();
+    $("#mywrapper"+id).show();
+
+    id =id+1;
+
+
+  });
+
+});
+
+function callHttp(url, data){
+               $.post(url, data, function(result){
+
+                 //$(".h2").empty().text(result)
+                 console.log(result)
+
+           })
+         }
+</script>
 
 </body>
 </html>

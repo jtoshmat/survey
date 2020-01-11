@@ -13,6 +13,16 @@
 {{$test->question_text}}<hr>
 @endforeach
 
+@foreach($tests as $test)
+{{$test->question_text}}<hr>
+@endforeach
+
+
+@foreach($questions as $question)
+    {{$question->question_text}}<hr>
+@endforeach
+
+
 
 <!--
 Basic skeleton - div, container,
@@ -54,6 +64,7 @@ button (redirects to survey)
 
 </div>
 </div>
+
 
 </body>
 </html>

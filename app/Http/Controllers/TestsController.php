@@ -27,7 +27,24 @@ class TestsController extends Controller
 
     public function option()
     {
-        $options = Question::all()->take(1);
-        return view('company',compact('options'));
+      $options = Question::all();
+      return view('company',compact('options'));
+    }
+
+    public function next(Request $request){
+
+      $id = $request['id'];
+
+      $options = Question::where('id',$id)->get();
+      return view('company',compact('options'));
+
+
+    }
+
+    public function getstarted ()
+    {
+
+        return view('getstarted');
     }
 }
+
